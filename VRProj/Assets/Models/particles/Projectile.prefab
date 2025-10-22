@@ -5192,5 +5192,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifetime: 3
+  lifetime: 20
   useGravity: 0

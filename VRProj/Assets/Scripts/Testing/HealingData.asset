@@ -15,7 +15,5 @@ MonoBehaviour:
   potionType: 0
   description: Revilitation
   ingredients:
-  - Rib x2
-  - Feather x1
-  - Moon water x1
-  - Crystal blue x1
+  - Rib
+  - Feather
