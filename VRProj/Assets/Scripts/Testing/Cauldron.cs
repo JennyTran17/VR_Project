@@ -12,7 +12,6 @@ public class Cauldron : MonoBehaviour
     public GameObject manaPrefab;
     public GameObject strengthPrefab;
     public GameObject speedPrefab;
-    public GameObject invisibilityPrefab;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -77,9 +76,6 @@ public class Cauldron : MonoBehaviour
                 break;
             case PotionType.Speed:
                 prefab = speedPrefab;
-                break;
-            case PotionType.Invisibility:
-                prefab = invisibilityPrefab;
                 break;
         }
 
