@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: HealingData
   m_EditorClassIdentifier: 
   potionType: 0
-  description: Revilitation
+  description: 'Revilitation - Heal 50% of total HP
+
+    Each ingredient is x 1 for
+    maximum effect'
   ingredients:
+  - Amber Crystal
   - Rib
   - Feather

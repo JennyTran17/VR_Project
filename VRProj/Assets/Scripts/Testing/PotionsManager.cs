@@ -36,7 +36,7 @@ public class PotionsManager : MonoBehaviour
             if (potion.potionType == type)
             {
                 currentPotion = potion;
-               // UpdateUI();
+                UpdateUI();
                 return;
             }
         }
