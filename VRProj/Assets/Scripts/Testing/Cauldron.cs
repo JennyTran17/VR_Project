@@ -1,17 +1,25 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Cauldron : MonoBehaviour
 {
+    [Header("Cauldron State")]
     public List<string> currentIngredients = new List<string>();
     public PotionsManager potionsManager;
-
     public Transform spawnPoint;
 
+    [Header("Potion Prefabs")]
     public GameObject healingPrefab;
     public GameObject manaPrefab;
     public GameObject strengthPrefab;
     public GameObject speedPrefab;
+
+    [Header("Explosion Effects")]
+    [Tooltip("List of explosion or magic burst prefabs to play before potion spawns")]
+    public List<GameObject> explosionEffects = new List<GameObject>();
+
+    private GameObject prefab;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -22,9 +30,7 @@ public class Cauldron : MonoBehaviour
             Debug.Log($"Ingredient {ingredientName} added to cauldron.");
             currentIngredients.Add(ingredientName);
 
-            // Optionally destroy the ingredient object (simulate being consumed)
             Destroy(other.gameObject);
-
             CheckPotion();
         }
     }
@@ -55,14 +61,11 @@ public class Cauldron : MonoBehaviour
 
         var recipeSet = new HashSet<string>(recipe);
         var addedSet = new HashSet<string>(addedIngredients);
-
-        return recipeSet.SetEquals(addedSet); // order-independent match
+        return recipeSet.SetEquals(addedSet);
     }
 
     private void SpawnPotion(PotionType type)
     {
-        GameObject prefab = null;
-
         switch (type)
         {
             case PotionType.Healing:
@@ -81,7 +84,38 @@ public class Cauldron : MonoBehaviour
 
         if (prefab != null)
         {
-            Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+            StartCoroutine(SpawnSequence(1f));
+        }
+    }
+
+    private IEnumerator SpawnSequence(float delay)
+    {
+        // Pick a random explosion effect from the list
+        GameObject chosenExplosion = null;
+        if (explosionEffects != null && explosionEffects.Count > 0)
+        {
+            int randomIndex = Random.Range(0, explosionEffects.Count);
+            chosenExplosion = explosionEffects[randomIndex];
+        }
+
+        // Instantiate explosion if available
+        GameObject explosionInstance = null;
+        if (chosenExplosion != null)
+        {
+            explosionInstance = Instantiate(chosenExplosion, spawnPoint.position, Quaternion.identity);
+        }
+
+        // Wait before potion spawns
+        yield return new WaitForSeconds(delay);
+
+        // Spawn the potion
+        Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+
+        // Destroy explosion after a short time
+        if (explosionInstance != null)
+        {
+            yield return new WaitForSeconds(0.5f);
+            Destroy(explosionInstance);
         }
     }
 }

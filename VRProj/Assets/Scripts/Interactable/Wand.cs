@@ -13,10 +13,10 @@ public class Wand : MonoBehaviour
     public Color[] wandColors;
 
     [Header("XR Input")]
-    [Tooltip("Assign either LeftHand Controller’s PrimaryButton or RightHand Controller’s PrimaryButton")]
+    [Tooltip("Assign either LeftHand Controller's PrimaryButton or RightHand Controller's PrimaryButton")]
     public InputActionProperty drawButtonAction; // A/B or X/Y
 
-    [Tooltip("Assign either LeftHand Controller’s SecondaryButton or RightHand Controller’s SecondaryButton")]
+    [Tooltip("Assign either LeftHand Controller's SecondaryButton or RightHand Controller's SecondaryButton")]
     public InputActionProperty sparkleButtonAction; // B/Y
 
     [Header("Sparkle Effect")]

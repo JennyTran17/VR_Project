@@ -36,7 +36,7 @@ public class SparkleProjectile : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.velocity = direction * speed;
+            rb.velocity = direction.normalized * speed;
         }
     }
 
