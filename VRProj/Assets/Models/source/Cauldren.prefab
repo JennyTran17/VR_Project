@@ -179,17 +179,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 218f0180206b2784ea9548b524c1e6bb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.07
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 218f0180206b2784ea9548b524c1e6bb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.07
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 218f0180206b2784ea9548b524c1e6bb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.07
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 218f0180206b2784ea9548b524c1e6bb,
         type: 3}
@@ -361,8 +361,7 @@ MonoBehaviour:
     type: 3}
   strengthPrefab: {fileID: 3197062313462173100, guid: e0682a1e5c1bb0e48abc27239b9dd1b2,
     type: 3}
-  speedPrefab: {fileID: 6647762382426925496, guid: 81e038247c8d46c408fbe9a4c8bca459,
-    type: 3}
+  lovePrefab: {fileID: 0}
   explosionEffects:
   - {fileID: 8974203713140315807, guid: 709b0bd6b0b625249a98409dd7a87343, type: 3}
   - {fileID: 4809171458859421548, guid: 4e91ed1a8efe7044785b9bd97a47d87f, type: 3}

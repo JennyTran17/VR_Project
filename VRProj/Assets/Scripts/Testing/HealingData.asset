@@ -18,6 +18,7 @@ MonoBehaviour:
     Each ingredient is x 1 for
     maximum effect'
   ingredients:
-  - Amber Crystal
-  - Rib
+  - Blue Crystal
   - Feather
+  - Flower
+  - Maple Leaf

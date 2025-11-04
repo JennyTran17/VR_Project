@@ -13,7 +13,7 @@ public class Cauldron : MonoBehaviour
     public GameObject healingPrefab;
     public GameObject manaPrefab;
     public GameObject strengthPrefab;
-    public GameObject speedPrefab;
+    public GameObject lovePrefab;
 
     [Header("Explosion Effects")]
     [Tooltip("List of explosion or magic burst prefabs to play before potion spawns")]
@@ -77,8 +77,8 @@ public class Cauldron : MonoBehaviour
             case PotionType.Strength:
                 prefab = strengthPrefab;
                 break;
-            case PotionType.Speed:
-                prefab = speedPrefab;
+            case PotionType.Love:
+                prefab = lovePrefab;
                 break;
         }
 

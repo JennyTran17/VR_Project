@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: ManaData
   m_EditorClassIdentifier: 
   potionType: 1
-  description: Strength - Attack % will be added to max
+  description: "Medium toxins that can be used to enhance power and mystical elemental
+    resonance. \nAware of intakes!"
   ingredients:
-  - Fire Crystal
-  - Apple
-  - Flower
+  - Amber Crystal
+  - Mushroom
+  - Branch
+  - Rib

@@ -8,8 +8,7 @@ public enum PotionType
     Healing,
     Mana,
     Strength,
-    Speed,
-    Invisibility
+    Love
 }
 public class PotionsManager : MonoBehaviour
 {
