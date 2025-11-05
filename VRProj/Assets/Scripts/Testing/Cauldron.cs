@@ -29,6 +29,7 @@ public class Cauldron : MonoBehaviour
             string ingredientName = ingredient.ingredientName;
             Debug.Log($"Ingredient {ingredientName} added to cauldron.");
             currentIngredients.Add(ingredientName);
+            StartCoroutine(Effect());
 
             Destroy(other.gameObject);
             CheckPotion();
@@ -110,6 +111,30 @@ public class Cauldron : MonoBehaviour
 
         // Spawn the potion
         Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+
+        // Destroy explosion after a short time
+        if (explosionInstance != null)
+        {
+            Destroy(explosionInstance);
+        }
+    }
+
+    private IEnumerator Effect()
+    {
+        // Pick a random explosion effect from the list
+        GameObject chosenExplosion = null;
+        if (explosionEffects != null && explosionEffects.Count > 0)
+        {
+            int randomIndex = Random.Range(0, explosionEffects.Count);
+            chosenExplosion = explosionEffects[randomIndex];
+        }
+
+        // Instantiate explosion if available
+        GameObject explosionInstance = null;
+        if (chosenExplosion != null)
+        {
+            explosionInstance = Instantiate(chosenExplosion, spawnPoint.position, Quaternion.identity);
+        }
 
         // Destroy explosion after a short time
         if (explosionInstance != null)

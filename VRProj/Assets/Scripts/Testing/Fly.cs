@@ -94,7 +94,7 @@ public class Fly : MonoBehaviour
         // Calculate a target rotation based on direction 
         Vector3 flatDirection = currentDirection;
 
-        if (flatDirection.sqrMagnitude > 1f)
+        if (flatDirection.sqrMagnitude > 0.7f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(flatDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothing);

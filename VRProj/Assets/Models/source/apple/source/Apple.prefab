@@ -95,6 +95,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5527124095433127245}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d191920c3e75c17489ae2f29ddbf6015,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2532590267893422776}
     - targetCorrespondingSourceObject: {fileID: 2847075735831922379, guid: d191920c3e75c17489ae2f29ddbf6015,
         type: 3}
       insertIndex: -1
@@ -312,3 +316,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &2532590267893422776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4223087015693692840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f602bf3dc9d0841be8e5a79a3c30d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: Apple

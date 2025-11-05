@@ -13,15 +13,13 @@ public class Wand : MonoBehaviour
     public Color[] wandColors;
 
     [Header("XR Input")]
-    [Tooltip("Assign either LeftHand Controller's PrimaryButton or RightHand Controller's PrimaryButton")]
-    public InputActionProperty drawButtonAction; // A/B or X/Y
-
-    [Tooltip("Assign either LeftHand Controller's SecondaryButton or RightHand Controller's SecondaryButton")]
-    public InputActionProperty sparkleButtonAction; // B/Y
+    public InputActionProperty drawButtonAction;      // A/B or X/Y
+    public InputActionProperty sparkleButtonAction;   // B/Y
 
     [Header("Sparkle Effect")]
-    public GameObject sparklePrefab;
-    public float sparkleCooldown = 0.5f;
+    public GameObject sparklePrefab;                  // Wand projectile
+    public GameObject otherMagicPrefab;               // Free-hand magic
+    public float sparkleCooldown = 0.2f;
 
     // Internal state
     private LineRenderer currentDrawing;
@@ -34,6 +32,9 @@ public class Wand : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
 
+    // Hand transform for free-hand magic
+    public Transform handTransform;
+
     private void Start()
     {
         currentColorIndex = 0;
@@ -43,24 +44,45 @@ public class Wand : MonoBehaviour
         drawButtonAction.action.Enable();
         sparkleButtonAction.action.Enable();
 
-        // Get grab interactable and set up events
         grabInteractable = GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnGrab);
             grabInteractable.selectExited.AddListener(OnRelease);
             if (grabInteractable.isSelected)
-            {
                 isHeld = true;
-            }
         }
     }
 
     private void Update()
     {
-        if (!isHeld) return; //  Only act if the wand is held
+        bool sparklePressed = sparkleButtonAction.action.WasPressedThisFrame();
 
-        // Drawing
+        if (isHeld)
+        {
+            // Drawing only if holding the wand
+            HandleDrawing();
+
+            // Shoot wand projectile
+            if (sparklePressed && Time.time - lastSparkleTime > sparkleCooldown)
+            {
+                ShootSparkle();
+                lastSparkleTime = Time.time;
+            }
+        }
+        else
+        {
+            // Free-hand magic spawns at the hand position
+            if (sparklePressed && otherMagicPrefab != null && handTransform != null && Time.time - lastSparkleTime > sparkleCooldown)
+            {
+                Instantiate(otherMagicPrefab, handTransform.position, handTransform.rotation);
+                lastSparkleTime = Time.time;
+            }
+        }
+    }
+
+    private void HandleDrawing()
+    {
         bool isPressed = drawButtonAction.action.ReadValue<float>() > 0.5f;
 
         if (isPressed && !isDrawing)
@@ -70,20 +92,11 @@ public class Wand : MonoBehaviour
 
         if (isDrawing)
             Draw();
-
-        // Sparkle shooting
-        bool sparklePressed = sparkleButtonAction.action.WasPressedThisFrame();
-        if (sparklePressed && Time.time - lastSparkleTime > sparkleCooldown)
-        {
-            ShootSparkle();
-            lastSparkleTime = Time.time;
-        }
     }
 
     private void StartDrawing()
     {
         isDrawing = true;
-
         GameObject lineObj = new GameObject("DrawingLine");
         currentDrawing = lineObj.AddComponent<LineRenderer>();
         currentDrawing.material = drawingMaterial;
@@ -113,7 +126,6 @@ public class Wand : MonoBehaviour
         }
     }
 
-    //  Shoot sparkle particle
     private void ShootSparkle()
     {
         if (sparklePrefab != null && tip != null)
@@ -125,7 +137,7 @@ public class Wand : MonoBehaviour
         }
     }
 
-    // Grab handlers
+    // Grab events
     private void OnGrab(SelectEnterEventArgs args)
     {
         isHeld = true;

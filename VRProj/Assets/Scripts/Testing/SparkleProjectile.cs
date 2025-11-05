@@ -4,7 +4,7 @@ public class SparkleProjectile : MonoBehaviour
 {
     [Header("Projectile Settings")]
     public float speed = 10f;
-    public float lifetime = 10f;
+    public float lifetime = 3f;
     public bool useGravity = false;
 
     private Rigidbody rb;
@@ -37,6 +37,7 @@ public class SparkleProjectile : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = direction.normalized * speed;
+            Destroy(gameObject, 3f);
         }
     }
 
