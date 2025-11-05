@@ -34,6 +34,7 @@ public class Wand : MonoBehaviour
 
     // Hand transform for free-hand magic
     public Transform handTransform;
+    public GameObject magicCircle;
 
     private void Start()
     {
@@ -75,7 +76,15 @@ public class Wand : MonoBehaviour
             // Free-hand magic spawns at the hand position
             if (sparklePressed && otherMagicPrefab != null && handTransform != null && Time.time - lastSparkleTime > sparkleCooldown)
             {
-                Instantiate(otherMagicPrefab, handTransform.position, handTransform.rotation);
+                GameObject magicObj = Instantiate(otherMagicPrefab, handTransform.position, handTransform.rotation);
+
+                // Parent to the hand
+                magicObj.transform.SetParent(handTransform);
+
+                // Snap into position and rotation relative to hand
+                magicObj.transform.localPosition = Vector3.zero;
+                magicObj.transform.localRotation = Quaternion.identity;
+
                 lastSparkleTime = Time.time;
             }
         }
@@ -86,9 +95,16 @@ public class Wand : MonoBehaviour
         bool isPressed = drawButtonAction.action.ReadValue<float>() > 0.5f;
 
         if (isPressed && !isDrawing)
+        {
+            magicCircle.SetActive(true);
             StartDrawing();
+        }    
         else if (!isPressed && isDrawing)
+        {
+            magicCircle.SetActive(false);
             StopDrawing();
+        }
+            
 
         if (isDrawing)
             Draw();

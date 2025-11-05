@@ -43,6 +43,26 @@ public class PotionsManager : MonoBehaviour
         Debug.LogWarning($"Potion type {type} not found in allPotions!");
     }
 
+    public void SetPotionHealing()
+    {
+        SelectPotion(PotionType.Healing);
+    }
+
+    public void SetPotionMana()
+    {
+        SelectPotion(PotionType.Mana);
+    }
+
+    public void SetPotionStrength()
+    {
+        SelectPotion(PotionType.Strength);
+    }
+
+    public void SetPotionLove()
+    {
+        SelectPotion(PotionType.Love);
+    }
+
     private void UpdateUI()
     {
         if (currentPotion == null) return;
