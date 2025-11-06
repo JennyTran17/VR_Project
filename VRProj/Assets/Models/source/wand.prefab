@@ -402,8 +402,23 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+  magicButtonAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Magic Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: dca4d002-35a9-42dc-afdd-5074c0faf4d3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   sparklePrefab: {fileID: 0}
+  otherMagicPrefab: {fileID: 0}
   sparkleCooldown: 0.5
+  handTransform: {fileID: 0}
+  magicCircle: {fileID: 0}
 --- !u!4 &4318165789680713017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 852ededc77f9272468b1b2d679507ed8,

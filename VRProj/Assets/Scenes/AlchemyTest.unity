@@ -874,7 +874,7 @@ PrefabInstance:
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.7
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
@@ -1024,13 +1024,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305750197}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.1, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364578161}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &318015867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,6 +1974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
+      propertyPath: magicCircle
+      value: 
+      objectReference: {fileID: 1596973123}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
       propertyPath: tipMaterial
       value: 
       objectReference: {fileID: 2100000, guid: e89d356d39aac8d4fbb2fcf29cf68488, type: 2}
@@ -1990,15 +1995,35 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
+      propertyPath: leftHandSocket
+      value: 
+      objectReference: {fileID: 1413074145}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
       propertyPath: drawingMaterial
       value: 
       objectReference: {fileID: 2100000, guid: e89d356d39aac8d4fbb2fcf29cf68488, type: 2}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: rightHandSocket
+      value: 
+      objectReference: {fileID: 335125967}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: otherMagicPrefab
       value: 
       objectReference: {fileID: 7053385775836331393, guid: 354b6251e950209409c75ab984acf000,
         type: 3}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 364578161}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 712900737}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: wandColors.Array.size
@@ -2036,8 +2061,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
+      propertyPath: freeHandMagicButtonAction.m_Action.m_Name
+      value: Free Hand Magic Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
       propertyPath: drawButtonAction.m_Action.m_SingletonActionBindings.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
@@ -2061,6 +2096,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
+      propertyPath: freeHandMagicButtonAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a55d6cf0-e4d2-43cc-8462-389f75705a35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 95c5df19-762c-4c7c-999d-b41558faea26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
       propertyPath: drawButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
       value: <XRController>{LeftHand}/{PrimaryButton}
       objectReference: {fileID: 0}
@@ -2068,6 +2118,16 @@ PrefabInstance:
         type: 3}
       propertyPath: drawButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Path
       value: <XRController>{RightHand}/{PrimaryButton}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <XRController>{LeftHand}/triggerPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <XRController>{RightHand}/triggerPressed
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
@@ -2096,6 +2156,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Magic Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: magicButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Magic Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
       propertyPath: sparkleButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
       value: <XRController>{RightHand}/{SecondaryButton}
       objectReference: {fileID: 0}
@@ -2113,6 +2183,21 @@ PrefabInstance:
         type: 3}
       propertyPath: sparkleButtonAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Action
       value: Sparkle Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: freeHandMagicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 96583b98-0ae6-4d4e-8b41-07f9eff7c9d6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: freeHandMagicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <XRController>{LeftHand}/triggerPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045802058617109289, guid: ad30825dc234fe04f90bf8bef20fc923,
+        type: 3}
+      propertyPath: freeHandMagicButtonAction.m_Action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Free Hand Magic Button
       objectReference: {fileID: 0}
     - target: {fileID: 2971358780020139977, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
@@ -2167,32 +2252,32 @@ PrefabInstance:
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02
+      value: 1.521
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 1.0108
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.69
+      value: -2.065
       objectReference: {fileID: 0}
     - target: {fileID: 4318165789680713017, guid: ad30825dc234fe04f90bf8bef20fc923,
         type: 3}
@@ -3743,7 +3828,7 @@ PrefabInstance:
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 17.3
       objectReference: {fileID: 0}
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
@@ -6592,7 +6677,7 @@ MonoBehaviour:
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 367340202}
+  m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -7001,7 +7086,7 @@ PrefabInstance:
     - target: {fileID: 3423388300971593625, guid: 48c5715f9603c3842a353516a8baefbb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 3423388300971593625, guid: 48c5715f9603c3842a353516a8baefbb,
         type: 3}
@@ -7092,6 +7177,12 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1596973123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3377181292992421420, guid: 48c5715f9603c3842a353516a8baefbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1596973119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627364684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7163,7 +7254,7 @@ PrefabInstance:
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.9
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
@@ -9077,7 +9168,7 @@ PrefabInstance:
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.8
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 8955800412556469818, guid: 8263d9af7b50a814da4904a212046d3c,
         type: 3}

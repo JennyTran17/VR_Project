@@ -15,10 +15,11 @@ public class Wand : MonoBehaviour
     [Header("XR Input")]
     public InputActionProperty drawButtonAction;      // A/B or X/Y
     public InputActionProperty sparkleButtonAction;   // B/Y
+    public InputActionProperty magicButtonAction;   // trigger pressed
 
     [Header("Sparkle Effect")]
     public GameObject sparklePrefab;                  // Wand projectile
-    public GameObject otherMagicPrefab;               // Free-hand magic
+    public GameObject otherMagicPrefab;               
     public float sparkleCooldown = 0.2f;
 
     // Internal state
@@ -44,6 +45,7 @@ public class Wand : MonoBehaviour
 
         drawButtonAction.action.Enable();
         sparkleButtonAction.action.Enable();
+        magicButtonAction.action.Enable();
 
         grabInteractable = GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
@@ -58,10 +60,10 @@ public class Wand : MonoBehaviour
     private void Update()
     {
         bool sparklePressed = sparkleButtonAction.action.WasPressedThisFrame();
+        bool magicPressed = magicButtonAction.action.WasPressedThisFrame();
 
         if (isHeld)
         {
-            // Drawing only if holding the wand
             HandleDrawing();
 
             // Shoot wand projectile
@@ -73,21 +75,31 @@ public class Wand : MonoBehaviour
         }
         else
         {
-            // Free-hand magic spawns at the hand position
-            if (sparklePressed && otherMagicPrefab != null && handTransform != null && Time.time - lastSparkleTime > sparkleCooldown)
-            {
-                GameObject magicObj = Instantiate(otherMagicPrefab, handTransform.position, handTransform.rotation);
+            return;
 
-                // Parent to the hand
-                magicObj.transform.SetParent(handTransform);
-
-                // Snap into position and rotation relative to hand
-                magicObj.transform.localPosition = Vector3.zero;
-                magicObj.transform.localRotation = Quaternion.identity;
-
-                lastSparkleTime = Time.time;
-            }
         }
+
+        if (magicPressed && otherMagicPrefab != null && handTransform != null)
+        {
+
+            Transform spawnPoint = handTransform;
+
+            XRController controller = handTransform.GetComponentInParent<XRController>();
+            
+
+            if (controller != null && controller.modelParent != null)
+            {
+                spawnPoint = handTransform;
+               
+            }
+
+            GameObject magicObj = Instantiate(otherMagicPrefab, spawnPoint.position, spawnPoint.rotation);
+
+            magicObj.transform.SetParent(spawnPoint, true);
+
+            lastSparkleTime = Time.time;
+        }
+       
     }
 
     private void HandleDrawing()
