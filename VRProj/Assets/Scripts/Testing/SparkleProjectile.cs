@@ -6,6 +6,7 @@ public class SparkleProjectile : MonoBehaviour
     public float speed = 10f;
     public float lifetime = 3f;
     public bool useGravity = false;
+    public GameObject smokePrefab;
 
     private Rigidbody rb;
     private ParticleSystem ps;
@@ -28,8 +29,6 @@ public class SparkleProjectile : MonoBehaviour
     {
         if (ps != null)
             ps.Play();
-
-        Destroy(gameObject, lifetime);
     }
 
     public void Launch(Vector3 direction)
@@ -37,7 +36,7 @@ public class SparkleProjectile : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = direction.normalized * speed;
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, lifetime);
         }
     }
 
@@ -47,6 +46,12 @@ public class SparkleProjectile : MonoBehaviour
         if (ps != null)
             ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
+        if (collision.gameObject != null)
+        {
+            GameObject smoke = Instantiate(smokePrefab, collision.gameObject.transform.position, collision.transform.rotation);
+            Destroy(collision.gameObject);
+            Destroy(smoke, 1);
+        }
         Destroy(gameObject, 0.1f);
     }
 }

@@ -5195,6 +5195,8 @@ MonoBehaviour:
   speed: 10
   lifetime: 3
   useGravity: 0
+  smokePrefab: {fileID: 4809171458859421548, guid: 4e91ed1a8efe7044785b9bd97a47d87f,
+    type: 3}
 --- !u!54 &8340533580250903016
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5217,7 +5219,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

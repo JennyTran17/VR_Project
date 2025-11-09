@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Cauldron : MonoBehaviour
 {
@@ -110,7 +111,31 @@ public class Cauldron : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Spawn the potion
-        Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        GameObject potion = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        potion.GetComponent<XRGrabInteractable>().interactionManager = GameObject.FindFirstObjectByType<XRInteractionManager>();
+
+        //Add points to strength, hp and power texts
+        if (potion.name == "HealthPotion")
+        {
+            HUDManager.instance.addHP();
+            HUDManager.instance.addPower("Healing");
+        }
+        else if(potion.name == "ManaPotion")
+        {
+            HUDManager.instance.addStrength();
+            HUDManager.instance.addPower("Mana Impact");
+        }
+        else if(potion.name == "LovePotion")
+        {
+            HUDManager.instance.addPower("Love at first sight");
+        }
+        else
+        {
+            HUDManager.instance.addHP();
+            HUDManager.instance.addStrength();
+            HUDManager.instance.addPower("Dark Magic ");
+        }
+
 
         // Destroy explosion after a short time
         if (explosionInstance != null)

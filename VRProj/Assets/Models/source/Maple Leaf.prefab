@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7110513690603042932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150646538719310817}
+  m_Layer: 0
+  m_Name: Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150646538719310817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110513690603042932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.0024, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1019248003855994860}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &697954406576007175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,7 +118,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: c95d31cd41244dd43acae1bb7a1bef81, type: 3}
     - {fileID: -8700617353114198275, guid: c95d31cd41244dd43acae1bb7a1bef81, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c95d31cd41244dd43acae1bb7a1bef81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 150646538719310817}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -1091292231839277006, guid: c95d31cd41244dd43acae1bb7a1bef81,
         type: 3}
@@ -106,6 +141,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8606418619412567229}
   m_SourcePrefab: {fileID: 100100000, guid: c95d31cd41244dd43acae1bb7a1bef81, type: 3}
+--- !u!4 &1019248003855994860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c95d31cd41244dd43acae1bb7a1bef81,
+    type: 3}
+  m_PrefabInstance: {fileID: 697954406576007175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8751992343217965109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1091292231839277006, guid: c95d31cd41244dd43acae1bb7a1bef81,
@@ -262,7 +303,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 150646538719310817}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -324,4 +365,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f602bf3dc9d0841be8e5a79a3c30d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: M
+  ingredientName: Maple Leaf

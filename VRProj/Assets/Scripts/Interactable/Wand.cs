@@ -98,6 +98,7 @@ public class Wand : MonoBehaviour
             magicObj.transform.SetParent(spawnPoint, true);
 
             lastSparkleTime = Time.time;
+            Destroy(magicObj, 3);
         }
        
     }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4363446751414749354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8632784726991892763}
+  m_Layer: 0
+  m_Name: Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8632784726991892763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4363446751414749354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9930092, y: -0, z: -0, w: 0.11803741}
+  m_LocalPosition: {x: 0.012, y: -0.018, z: 0.004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 706138794474844178}
+  m_LocalEulerAnglesHint: {x: 166.442, y: 0, z: 0}
 --- !u!1001 &1028522773946226681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,7 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8632784726991892763}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -3421796697017627320, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5,
         type: 3}
@@ -99,7 +134,17 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 119590573775584812}
+    - targetCorrespondingSourceObject: {fileID: -3421796697017627320, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5860861790413638023}
   m_SourcePrefab: {fileID: 100100000, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5, type: 3}
+--- !u!4 &706138794474844178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028522773946226681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6828963417242344113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3421796697017627320, guid: 7d5193e1d3f9ea84c853d09a2a9ef1d5,
@@ -256,7 +301,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 8632784726991892763}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -270,11 +315,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 0
+  m_SmoothPosition: 1
   m_SmoothPositionAmount: 8
   m_TightenPosition: 0.1
   m_TrackRotation: 1
-  m_SmoothRotation: 0
+  m_SmoothRotation: 1
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
   m_TrackScale: 1
@@ -306,3 +351,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &5860861790413638023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828963417242344113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f602bf3dc9d0841be8e5a79a3c30d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: Mushroom
