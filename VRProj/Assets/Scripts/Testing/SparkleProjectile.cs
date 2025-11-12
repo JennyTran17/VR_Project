@@ -48,8 +48,8 @@ public class SparkleProjectile : MonoBehaviour
 
         if (collision.gameObject != null)
         {
-            GameObject smoke = Instantiate(smokePrefab, collision.gameObject.transform.position, collision.transform.rotation);
-            Destroy(collision.gameObject);
+            GameObject smoke = Instantiate(smokePrefab, gameObject.transform.position, transform.rotation);
+            
             Destroy(smoke, 1);
         }
         Destroy(gameObject, 0.1f);
