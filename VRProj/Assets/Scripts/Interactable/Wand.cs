@@ -81,7 +81,6 @@ public class Wand : MonoBehaviour
 
         if (magicPressed && otherMagicPrefab != null && handTransform != null)
         {
-
             Transform spawnPoint = handTransform;
 
             XRController controller = handTransform.GetComponentInParent<XRController>();
@@ -100,6 +99,7 @@ public class Wand : MonoBehaviour
             lastSparkleTime = Time.time;
             Destroy(magicObj, 3);
         }
+       
        
     }
 

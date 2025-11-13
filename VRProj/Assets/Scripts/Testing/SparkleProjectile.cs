@@ -36,6 +36,9 @@ public class SparkleProjectile : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = direction.normalized * speed;
+            GameObject smoke = Instantiate(smokePrefab, gameObject.transform.position, transform.rotation);
+
+            Destroy(smoke, 1);
             Destroy(gameObject, lifetime);
         }
     }
@@ -46,12 +49,13 @@ public class SparkleProjectile : MonoBehaviour
         if (ps != null)
             ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
-        if (collision.gameObject != null)
+        if (collision.gameObject != null && collision.gameObject.CompareTag("Destroyable"))
         {
             GameObject smoke = Instantiate(smokePrefab, gameObject.transform.position, transform.rotation);
-            
+
             Destroy(smoke, 1);
+            Destroy(collision.gameObject);
         }
-        Destroy(gameObject, 0.1f);
+        
     }
 }

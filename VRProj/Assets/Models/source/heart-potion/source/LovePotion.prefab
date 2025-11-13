@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2816420546496157462}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &4428344875511694276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4195991236761047698}
+  m_Layer: 0
+  m_Name: cap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4195991236761047698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4428344875511694276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0.01803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2816420546496157462}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2350693110087856381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2e2ddc5632a58f54eb701be1d7ee85c0,
         type: 3}
       propertyPath: m_Name
-      value: Potion Health
+      value: LovePotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -121,6 +152,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3068474804323283225}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e2ddc5632a58f54eb701be1d7ee85c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4195991236761047698}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e2ddc5632a58f54eb701be1d7ee85c0,
         type: 3}
@@ -134,6 +169,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 554428787600510882}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e2ddc5632a58f54eb701be1d7ee85c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4297736470971446896}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e2ddc5632a58f54eb701be1d7ee85c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1600314188417777105}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2ddc5632a58f54eb701be1d7ee85c0, type: 3}
 --- !u!4 &2816420546496157462 stripped
 Transform:
@@ -347,3 +390,60 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-4297736470971446896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197062313462173100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e311508d4777a834fb25a1729a564503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1600314188417777105}
+        m_TargetAssemblyTypeName: FlowingLiquid, Assembly-CSharp
+        m_MethodName: Flow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1600314188417777105}
+        m_TargetAssemblyTypeName: FlowingLiquid, Assembly-CSharp
+        m_MethodName: StopFlow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1600314188417777105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197062313462173100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a1fa64e0873d24cb3f5f5a3b6ee128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquid: {fileID: 6780377621897443495, guid: c853f7b72cdc2bd4fa5256d87b460f1a, type: 3}
+  cap: {fileID: 4428344875511694276}

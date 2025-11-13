@@ -16,8 +16,6 @@ MonoBehaviour:
   description: Increase magic by 10%. Power influenced by the alignment of the stars,
     under the house of Gemini
   ingredients:
-  - Magical Crystal
-  - Bubbles
-  - Shell
-  - Iris Butterfly
+  - Purple Crystal
+  - Apple
   - Eyeball

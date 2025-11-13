@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6130193005755990350}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,6 +373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bubbles
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 316f8cf9ae9465c4584749a8da257d57,
+        type: 3}
+      propertyPath: m_TagString
+      value: Destroyable
       objectReference: {fileID: 0}
     - target: {fileID: 2057924584135145142, guid: 316f8cf9ae9465c4584749a8da257d57,
         type: 3}
