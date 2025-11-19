@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class FlowingLiquid : MonoBehaviour
 {
-    public GameObject liquid;
-    public GameObject cap;
-
-    GameObject instant;
 
     public void Flow()
     {
-        if (liquid != null)
-           instant = Instantiate(liquid, cap.transform.position, cap.transform.rotation);
+        gameObject.GetComponent<ParticleSystem>().Play();
     }
 
     public void StopFlow()
     {
-        Destroy(instant);
+        gameObject.GetComponent<ParticleSystem>().Stop();
     }
 }
