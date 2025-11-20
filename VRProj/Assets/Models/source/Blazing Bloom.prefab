@@ -124,36 +124,36 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3144024851951311191}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 221492158236445899, guid: 2d9ac46db342ab24492283096b465b01,
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9ac46db342ab24492283096b465b01,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2197246282819909011}
-    - targetCorrespondingSourceObject: {fileID: 221492158236445899, guid: 2d9ac46db342ab24492283096b465b01,
+      addedObject: {fileID: 4449717604443889313}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9ac46db342ab24492283096b465b01,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5012826261023386079}
-    - targetCorrespondingSourceObject: {fileID: 221492158236445899, guid: 2d9ac46db342ab24492283096b465b01,
+      addedObject: {fileID: 7314228362172625369}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9ac46db342ab24492283096b465b01,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7251109739941494431}
-    - targetCorrespondingSourceObject: {fileID: 221492158236445899, guid: 2d9ac46db342ab24492283096b465b01,
+      addedObject: {fileID: 624791389193822468}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9ac46db342ab24492283096b465b01,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5863783989997615830}
+      addedObject: {fileID: 4080798698844232283}
   m_SourcePrefab: {fileID: 100100000, guid: 2d9ac46db342ab24492283096b465b01, type: 3}
---- !u!1 &7765930332203060479 stripped
+--- !u!1 &7211859897785253221 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 221492158236445899, guid: 2d9ac46db342ab24492283096b465b01,
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d9ac46db342ab24492283096b465b01,
     type: 3}
   m_PrefabInstance: {fileID: 7553879680451002420}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &2197246282819909011
+--- !u!54 &4449717604443889313
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7765930332203060479}
+  m_GameObject: {fileID: 7211859897785253221}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -174,34 +174,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5012826261023386079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7765930332203060479}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0013093727, y: 0.0009819071, z: 0.0075443527}
-  m_Center: {x: 0.00010345919, y: 0.00037244757, z: 0.0041189366}
---- !u!114 &7251109739941494431
+--- !u!114 &7314228362172625369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7765930332203060479}
+  m_GameObject: {fileID: 7211859897785253221}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -347,19 +326,40 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &5863783989997615830
+--- !u!114 &624791389193822468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7765930332203060479}
+  m_GameObject: {fileID: 7211859897785253221}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f602bf3dc9d0841be8e5a79a3c30d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Blazing Bloom
+--- !u!65 &4080798698844232283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211859897785253221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21576473, y: 0.68769455, z: 0.3017153}
+  m_Center: {x: -0.027618408, y: 0.4165118, z: 0.002231598}
 --- !u!4 &8024988962360633311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d9ac46db342ab24492283096b465b01,
