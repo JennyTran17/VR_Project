@@ -21,6 +21,11 @@ public class Cauldron : MonoBehaviour
     public List<GameObject> explosionEffects = new List<GameObject>();
 
     private GameObject prefab;
+    private AudioSource audioSource;
+    private void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -31,7 +36,7 @@ public class Cauldron : MonoBehaviour
             Debug.Log($"Ingredient {ingredientName} added to cauldron.");
             currentIngredients.Add(ingredientName);
             StartCoroutine(Effect());
-
+            
             Destroy(other.gameObject);
             CheckPotion();
         }
@@ -146,6 +151,7 @@ public class Cauldron : MonoBehaviour
 
     private IEnumerator Effect()
     {
+        audioSource.Play();
         // Pick a random explosion effect from the list
         GameObject chosenExplosion = null;
         if (explosionEffects != null && explosionEffects.Count > 0)
@@ -167,5 +173,8 @@ public class Cauldron : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             Destroy(explosionInstance);
         }
+
+        yield return new WaitForSeconds(1);
+        audioSource.Stop();
     }
 }
