@@ -163,6 +163,7 @@ public class Wand : MonoBehaviour
             SparkleProjectile projectile = sparkle.GetComponent<SparkleProjectile>();
             if (projectile != null)
                 projectile.Launch(tip.forward);
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
 

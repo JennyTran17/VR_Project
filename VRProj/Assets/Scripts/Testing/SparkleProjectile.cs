@@ -45,7 +45,7 @@ public class SparkleProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Optionally handle impact effect or particle burst here
+        // Handle impact effect or particle burst here
         if (ps != null)
             ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
