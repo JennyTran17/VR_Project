@@ -147,6 +147,11 @@ public class Cauldron : MonoBehaviour
         {
             Destroy(explosionInstance);
         }
+
+        var checker = FindObjectOfType<PotionCompletionChecker>();
+        if (checker != null)
+            checker.RegisterPotion(potion);
+
     }
 
     private IEnumerator Effect()

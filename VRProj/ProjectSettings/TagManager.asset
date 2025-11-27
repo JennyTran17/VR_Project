@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ingredients
   - Destroyable
+  - Potions
   layers:
   - Default
   - TransparentFX
