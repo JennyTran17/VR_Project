@@ -5,7 +5,7 @@ using UnityEngine.Video;
 public class PotionCompletionChecker : MonoBehaviour
 {
     [Header("Potion Settings")]
-    public int totalPotionTypes = 4;         // Number of unique potions needed
+    public int totalPotionTypes = 4;         
 
     [Header("Events")]
     public GameObject lightBeam;
@@ -14,7 +14,7 @@ public class PotionCompletionChecker : MonoBehaviour
     private HashSet<string> craftedPotionNames = new HashSet<string>();
     private bool eventTriggered = false;
 
-    // Call this when a potion prefab is instantiated
+    // When a potion prefab is instantiated
     public void RegisterPotion(GameObject potionObj)
     {
         if (eventTriggered) return;
