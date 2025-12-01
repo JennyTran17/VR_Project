@@ -9,7 +9,7 @@ public class PotionCompletionChecker : MonoBehaviour
 
     [Header("Events")]
     public GameObject lightBeam;
-    public VideoPlayer videoPlayer;
+    public GameObject videoPlayerObj;
 
     private HashSet<string> craftedPotionNames = new HashSet<string>();
     private bool eventTriggered = false;
@@ -32,8 +32,8 @@ public class PotionCompletionChecker : MonoBehaviour
         if (lightBeam != null)
             lightBeam.SetActive(true);
 
-        if (videoPlayer != null)
-            videoPlayer.Play();
+        if (videoPlayerObj != null)
+            videoPlayerObj.SetActive(true);
 
         Debug.Log("All potions crafted. Event triggered!");
     }
