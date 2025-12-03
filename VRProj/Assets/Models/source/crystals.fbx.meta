@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: 919411a6749919c47869572f1c39bcc6
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.002
+    second: {fileID: 2100000, guid: 7e3e55a0164f7ae46b26a52a1ac9e343, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.003
+    second: {fileID: 2100000, guid: 69ee4b3f4a7551045bb83bd9d5ddad90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.004
+    second: {fileID: 2100000, guid: b999f3928f633df4d9fac1c8ec180609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.005
+    second: {fileID: 2100000, guid: 873f22fa204276f43895b39e2af67df0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.006
+    second: {fileID: 2100000, guid: 996e1b0bb14ef8f4296943c88e88e4df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.007
+    second: {fileID: 2100000, guid: 9fa457bbc7a31254389225886fa2a484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.008
+    second: {fileID: 2100000, guid: 3a8bd0002cbff3847a263f6bbc334f42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.009
+    second: {fileID: 2100000, guid: f0417893c90bcf446a2744085ad312ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.010
+    second: {fileID: 2100000, guid: dedc7b9c5001be74e8fe47773ff4a7c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.011
+    second: {fileID: 2100000, guid: 6aac87959c73212438973cbddd72969d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.012
+    second: {fileID: 2100000, guid: ee09382fab159294cb1b0b250375225a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.013
+    second: {fileID: 2100000, guid: ab856083c83733c43a74c69617335494, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.014
+    second: {fileID: 2100000, guid: e511e4437092d714c8fe4a1e36ed807d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.015
+    second: {fileID: 2100000, guid: 243b72e659d470f4e88836e851ec0e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.016
+    second: {fileID: 2100000, guid: 80351ff44779b1540ab33616d89b0058, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.017
+    second: {fileID: 2100000, guid: 2f80f80919c59564a8dad41babef2a68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.018
+    second: {fileID: 2100000, guid: 8e2d03e7df9c2224fa2ecde13af70121, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.019
+    second: {fileID: 2100000, guid: dcfb67b4c93363249877b5a1a5b3d10d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.020
+    second: {fileID: 2100000, guid: 88b440851ae025e4d9a5322c889e9f73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.021
+    second: {fileID: 2100000, guid: c41947bc6f82c26418ac7e74f9b4d466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_material.022
+    second: {fileID: 2100000, guid: e22fcbbe66c66094dba6421f0516488b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 11a0588679ed_Colorful_rainbow_cr_metallic
+    second: {fileID: 2800000, guid: 17b255823657ff54588eff7e56bbf7f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 11a0588679ed_Colorful_rainbow_cr_normals
+    second: {fileID: 2800000, guid: 5e8dde907e36fff4b8dac21e508f85ac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 11a0588679ed_Colorful_rainbow_cr_rgb
+    second: {fileID: 2800000, guid: e48090746a8cfc1429077f5232b2b37d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 11a0588679ed_Colorful_rainbow_cr_roughness
+    second: {fileID: 2800000, guid: c13222b45980d924d9ead0d8abe16a4c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 18c682c06172_Amethyst_purple_cry_metallic
+    second: {fileID: 2800000, guid: 64c15e6cd8ccd3c4aaa48e210b277404, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 18c682c06172_Amethyst_purple_cry_normals
+    second: {fileID: 2800000, guid: cd7c81682a537314c9ce85d1353b46bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 18c682c06172_Amethyst_purple_cry_rgb
+    second: {fileID: 2800000, guid: 3c7cf55051a0cf643a3d9a9c17612d39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 18c682c06172_Amethyst_purple_cry_roughness
+    second: {fileID: 2800000, guid: cbe605ad5b3781042adf56b9c0629f06, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 266d91dfae64_Red_crystal__realis_metallic
+    second: {fileID: 2800000, guid: fda803e7d3a527e4381bb907360d9d2d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 266d91dfae64_Red_crystal__realis_normals
+    second: {fileID: 2800000, guid: 820edf667f445a94d85dc3e39d86d44f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 266d91dfae64_Red_crystal__realis_rgb
+    second: {fileID: 2800000, guid: f36fd7b826854444c824fdd4e6c0b897, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 266d91dfae64_Red_crystal__realis_roughness
+    second: {fileID: 2800000, guid: a0434633b1d249d419fe486c85931266, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 41eedca82004_Green_blue_crystal__metallic
+    second: {fileID: 2800000, guid: 6d11767fb21de594fa3494de848dbb7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 41eedca82004_Green_blue_crystal__normals
+    second: {fileID: 2800000, guid: 3e54f596840625f419bfc3160da9a312, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 41eedca82004_Green_blue_crystal__rgb
+    second: {fileID: 2800000, guid: 8ff941714d56093459e0ca6414ac8c65, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 41eedca82004_Green_blue_crystal__roughness
+    second: {fileID: 2800000, guid: 0bbada9e91b23ec4b85c9b0aaf6daced, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 429bf558ea19_Citrine_quarz_cryst_metallic
+    second: {fileID: 2800000, guid: 0c5e5d63ba200d74dbd04ee459bb43ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 429bf558ea19_Citrine_quarz_cryst_normals
+    second: {fileID: 2800000, guid: 3cab7e5163f16904fa2ebb51680ce369, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 429bf558ea19_Citrine_quarz_cryst_rgb
+    second: {fileID: 2800000, guid: 6d9c9c944b661ef42935f63c0d6c8d2c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 429bf558ea19_Citrine_quarz_cryst_roughness
+    second: {fileID: 2800000, guid: e59929c3b7070c241b1484d561870ea9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45c2fae0755f_Magical_crystal__re_metallic
+    second: {fileID: 2800000, guid: b529c4cb7be786e468c813029eeec32e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45c2fae0755f_Magical_crystal__re_normals
+    second: {fileID: 2800000, guid: 66153fae3cfafd044b0da87b71f82747, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45c2fae0755f_Magical_crystal__re_rgb
+    second: {fileID: 2800000, guid: 1e3ff765951b99a47afc3f572e600838, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45c2fae0755f_Magical_crystal__re_roughness
+    second: {fileID: 2800000, guid: fe44ed4fd21acd94e97c35bf0ea93232, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45f207750ec1_Black_crystal__real_metallic
+    second: {fileID: 2800000, guid: 9d30461a582a43543a255edc57ae9a66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45f207750ec1_Black_crystal__real_normals
+    second: {fileID: 2800000, guid: 1be015ddbd959e04d8cc445e6c6adeab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45f207750ec1_Black_crystal__real_rgb
+    second: {fileID: 2800000, guid: eae93ad762584894ca755c363435de46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 45f207750ec1_Black_crystal__real_roughness
+    second: {fileID: 2800000, guid: e8bd6b784a23a7c45a35943ddfaa1365, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 60cb53db189b_a_green_crystal_min_metallic
+    second: {fileID: 2800000, guid: 9a92bcc9f1eb2c649ad8064b3c8d280b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 60cb53db189b_a_green_crystal_min_normals
+    second: {fileID: 2800000, guid: 7ce257f700c806c40a0f2e84dd6b3563, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 60cb53db189b_a_green_crystal_min_rgb
+    second: {fileID: 2800000, guid: 8ba9f8735d55b314f865e7c5de288860, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 60cb53db189b_a_green_crystal_min_roughness
+    second: {fileID: 2800000, guid: b8c18fbb12ba1a745b7f724646c1b40b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7247c266d717_Colorful_rainbow_cr_metallic
+    second: {fileID: 2800000, guid: 1ff078181d22aad47837fb57ea5e4f1d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7247c266d717_Colorful_rainbow_cr_normals
+    second: {fileID: 2800000, guid: 76fdccdbd375a954ba1184229d65d3da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7247c266d717_Colorful_rainbow_cr_rgb
+    second: {fileID: 2800000, guid: 3672ef740c2cd0147945e95c9590312a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7247c266d717_Colorful_rainbow_cr_roughness
+    second: {fileID: 2800000, guid: d70c1764c3b6c06409049fe4187dba70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7e98179ea168_Fire_crystal__reali_metallic
+    second: {fileID: 2800000, guid: 7abe88f740bc4c541b2624db842c8166, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7e98179ea168_Fire_crystal__reali_normals
+    second: {fileID: 2800000, guid: 33587b39f9327bd48bf87578887baff4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7e98179ea168_Fire_crystal__reali_rgb
+    second: {fileID: 2800000, guid: ce037a5ba003af9429a8e6733132e9a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 7e98179ea168_Fire_crystal__reali_roughness
+    second: {fileID: 2800000, guid: 6e9592168d9b8bf408600deb4450e009, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8ba4c6c71e29_Green_crystal__real_metallic
+    second: {fileID: 2800000, guid: 88629253b6fde10438bb68307e4c969e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8ba4c6c71e29_Green_crystal__real_normals
+    second: {fileID: 2800000, guid: 471281231600f2c458b6d98ca50273de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8ba4c6c71e29_Green_crystal__real_rgb
+    second: {fileID: 2800000, guid: a39b461bb29222043a48017ffe5e40f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 8ba4c6c71e29_Green_crystal__real_roughness
+    second: {fileID: 2800000, guid: 2876a7c90eb3c0847a3e87512d061345, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9a5a8b80af03_Blue_crystal__reali_metallic
+    second: {fileID: 2800000, guid: 3ae8a613224a23d469e5b5ceb38d7ae5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9a5a8b80af03_Blue_crystal__reali_normals
+    second: {fileID: 2800000, guid: bf72b39ebbd5ec24fb5900cc656642b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9a5a8b80af03_Blue_crystal__reali_rgb
+    second: {fileID: 2800000, guid: da89fe20a7aa0454598a3ab17cdc97c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9a5a8b80af03_Blue_crystal__reali_roughness
+    second: {fileID: 2800000, guid: e3c115a5eab63d84e8f51f03fadd8338, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ac4282845a29_Orange_crystal__rea_metallic
+    second: {fileID: 2800000, guid: 461a82b029c61e84b8b280a221a719b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ac4282845a29_Orange_crystal__rea_normals
+    second: {fileID: 2800000, guid: 8b16145ea14e40a41b7c148b62836b96, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ac4282845a29_Orange_crystal__rea_rgb
+    second: {fileID: 2800000, guid: a5a4ef7b1248d144bb3c67359e696d1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ac4282845a29_Orange_crystal__rea_roughness
+    second: {fileID: 2800000, guid: f5f2276a63dfe3f4986b9c84a3997803, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: b066acb467dd_Iridescent_crystal__metallic
+    second: {fileID: 2800000, guid: 799c94e60d0b99947a3a9d434c0b7b69, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: b066acb467dd_Iridescent_crystal__normals
+    second: {fileID: 2800000, guid: 97a60a2af6676c64292747f6f37f2ef5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: b066acb467dd_Iridescent_crystal__rgb
+    second: {fileID: 2800000, guid: 0ce0140bd2a19ff449d0547c14d5ae8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: b066acb467dd_Iridescent_crystal__roughness
+    second: {fileID: 2800000, guid: 11f65fd20534e4b4998d4c0ee8765505, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bf015094602e_Pink_crystal__reali_metallic
+    second: {fileID: 2800000, guid: 9c7d2617a4c139b45bcfbcf19afdd554, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bf015094602e_Pink_crystal__reali_normals
+    second: {fileID: 2800000, guid: c531819e96f8e524a870caf2a54f25ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bf015094602e_Pink_crystal__reali_rgb
+    second: {fileID: 2800000, guid: 45a02d423b7f80445956c07bae43fdd6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bf015094602e_Pink_crystal__reali_roughness
+    second: {fileID: 2800000, guid: b87e0e543c1522a4082bdaf4578e7644, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: d3eaf8da2b6a_Amber_crystal__smal_metallic
+    second: {fileID: 2800000, guid: c9e5483b15a988943b5364d6210c8da4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: d3eaf8da2b6a_Amber_crystal__smal_normals
+    second: {fileID: 2800000, guid: 295741da6058f8b489db1bbd64fd7433, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: d3eaf8da2b6a_Amber_crystal__smal_rgb
+    second: {fileID: 2800000, guid: 79fdf4c8b38002e4c9053f3b0c50f6fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: d3eaf8da2b6a_Amber_crystal__smal_roughness
+    second: {fileID: 2800000, guid: d96cd347fa496a54996332a7fd823bd8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc16431d160b_Cyan_crystal__reali_metallic
+    second: {fileID: 2800000, guid: 0d1ed5bc4e66b8248a9fb69068f5862d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc16431d160b_Cyan_crystal__reali_normals
+    second: {fileID: 2800000, guid: 82e7b5e7c9fdf7e4dadb3f0fbedb34a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc16431d160b_Cyan_crystal__reali_rgb
+    second: {fileID: 2800000, guid: 8c0442fd3180298438664836c226e734, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc16431d160b_Cyan_crystal__reali_roughness
+    second: {fileID: 2800000, guid: 273235fefb1b1a94c9d431de5d4c0d72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc906803b648_Shimmering_crystal__metallic
+    second: {fileID: 2800000, guid: 0870dad1319c9fe44b7d898abd64be52, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc906803b648_Shimmering_crystal__normals
+    second: {fileID: 2800000, guid: 7388c7f933bd66847989a5a472d0b013, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc906803b648_Shimmering_crystal__rgb
+    second: {fileID: 2800000, guid: 0c63edb61c903e047aa96b9eaeac66bf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dc906803b648_Shimmering_crystal__roughness
+    second: {fileID: 2800000, guid: b13635eeaae42dd448c5581497eab16c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ee311cdcf3fc_Fluorescent_glowing_metallic
+    second: {fileID: 2800000, guid: ef65ab52c3110354ab80c074836cf159, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ee311cdcf3fc_Fluorescent_glowing_normals
+    second: {fileID: 2800000, guid: 11ef5998f87cb7e459fd7cfaa11bec7d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ee311cdcf3fc_Fluorescent_glowing_rgb
+    second: {fileID: 2800000, guid: 2a67835ce92c24342a91cf51791c5f79, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ee311cdcf3fc_Fluorescent_glowing_roughness
+    second: {fileID: 2800000, guid: 5956ddaf691fd044a8d566fe093bbd66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f46823f2032c_Meat_crystal__reali_metallic
+    second: {fileID: 2800000, guid: 7a668ddd56a87b84081f4ade05d8d567, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f46823f2032c_Meat_crystal__reali_normals
+    second: {fileID: 2800000, guid: ae8ee04dc746ea548aefa48ee3403ab7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f46823f2032c_Meat_crystal__reali_rgb
+    second: {fileID: 2800000, guid: 53557d6f58551d64ab117e59c173b3b8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f46823f2032c_Meat_crystal__reali_roughness
+    second: {fileID: 2800000, guid: 71209a4ee19517c4a8184bed638c31cc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f90abff87def_Turquoise_crystal___metallic
+    second: {fileID: 2800000, guid: 0335e8c97530c554aa950fd9012152f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f90abff87def_Turquoise_crystal___normals
+    second: {fileID: 2800000, guid: 72cd827a281508240a3b64ff0cf86f5c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f90abff87def_Turquoise_crystal___rgb
+    second: {fileID: 2800000, guid: 32b538dd51249ba41817fa061d19916c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: f90abff87def_Turquoise_crystal___roughness
+    second: {fileID: 2800000, guid: bfd942f5ed85df44a9e7e3ea9c4284be, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
