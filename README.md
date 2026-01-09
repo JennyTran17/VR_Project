@@ -10,7 +10,7 @@ The application allows the player to move freely through a virtual space, collec
 This report documents the technical achievements of the project, highlights challenges encountered during development, and reflects on the learning outcomes achieved.
 <table border="0">
   <tr align="center">
-    <td><img src="https://github.com/user-attachments/assets/28c0be3a-c603-4d14-9a37-ae30053d3c2c" width="500"></td>
+    <td><img src="https://github.com/user-attachments/assets/28c0be3a-c603-4d14-9a37-ae30053d3c2c" width="400"></td>
   </tr>
 </table>
 
