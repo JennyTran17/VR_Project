@@ -3,11 +3,9 @@
 
 
 ## 1. Introduction
-Witchcraft VR is a virtual reality prototype developed using Unity (v 2022.3.62f1) and the XR Interaction Toolkit. 
+Witchcraft VR is a virtual reality application developed using Unity (v 2022.3.62f1) and the XR Interaction Toolkit with the aim is to have a gameplay with interaction design, locomotion inside a VR environment. Player can move freely through a virtual space, collect ingredients and craft potions.
 
-The project's aim is to explore interaction design, locomotion, and object-based gameplay within a VR environment. Player move freely through a virtual space, collect ingredients and craft potions.
-
-This report documents the technical achievements of the project, highlights challenges encountered during development, and learning outcomes reflection.
+This report will document the technical achievements of the project, highlights challenges encountered during development, and learning outcomes reflection.
 <table border="0">
   <tr align="center">
     <td><img src="https://github.com/user-attachments/assets/28c0be3a-c603-4d14-9a37-ae30053d3c2c" width="400"></td>
@@ -22,12 +20,12 @@ The primary design goal of Witchcraft VR was to create a small but complete VR e
 3. Crafting potions  
 4. Unlocking progression through player actions  
 
-Different mechanics were designed to feel physically grounded in VR, making use of the VR hand interaction, spatial positioning, and visual feedback.
+Different mechanics were designed to make use of the VR hand interaction, spatial positioning, and visual feedback. (Will be discussed later)
 
-Another key objective was extensibility. Potion crafting and interaction logic were designed as additional content without affecting the existing structure .
+The project also focuses on extensibility in which features like potion crafting and interaction logic were designed as additional content without affecting the existing structure.
 
 
-## 3. Technical Implementation and Challenges
+## 3. Technical Implementation, Challenges and Solution
 ### 3.1 Wand Interaction System
 It uses the XR Grab Interactable component, allowing the wand to be picked up and released using XR Ray Interactors.
 
@@ -37,7 +35,9 @@ The wand system supports the following interactions:
 - Detecting which hand is currently holding the wand  
 - Detecting which hand for additional mechanics like shooting and power ignition.
 
-A significant technical challenge was handling the fact that XR Interaction Toolkit does not use traditional transform parenting. This meant that the wand was not a child of the hand transform. The issue was resolved by detecting the active XR interactor at runtime and using XR attach points to correctly align magic effects with the hand.
+A significant technical challenge was that it doesnot detect the correct interacting hand and causes error while trying to perform the mechanic. This is because XR Interaction Toolkit does not use traditional transform parenting and the focus was on getting the incorrect transform. The wand was not a child of the hand transform.
+
+The issue was resolved by detecting the active XR interactor at runtime instead and using XR attach points to correctly align magic effects with the hand.
 
 **Screenshots:**
 <table border="0">
@@ -55,9 +55,9 @@ The potion crafting system uses ScriptableObjects and a central manager class. E
 - Required ingredients  
 - A short description  
 
-The `PotionsManager` handles potion selection and updates the user interface using TextMeshPro. Ingredient lists and descriptions are presented clearly to the player to support decision-making during crafting.
+The `PotionsManager` handles potion selection and updates the user interface using TextMeshPro which will be shown in the magic book. Ingredient lists and descriptions are presented clearly to the player to support decision-making during crafting.
 
-Ingredients collected in the world can be dropped into a cauldron. When this occurs, the system checks whether the added ingredients match a valid recipe. Recipes are matched in an order-independent manner, allowing flexibility in how ingredients are added.
+Ingredients collected in the world can be dropped into a cauldron. When this happens, the system checks whether the added ingredients match a valid recipe. Recipes are matched in order, allowing flexibility in how ingredients are added.
 
 A limitation of the current system is that it requires an exact match in both ingredients and quantity. So while this keeps the logic simple and reliable, it reduces flexibility and is something to be considered for future development.
 
@@ -86,15 +86,15 @@ A limitation of the current system is that it requires an exact match in both in
 
 
 ### 3.3 Broom Flying Mechanic
-Player movement is primarily handled through a broom-based flying mechanic, which allows for free traversal in the environment without relying only on teleportation. 
+Player movement also includes flying mechanic using an attached broom, which allows for free traversal in the environment without relying only on teleportation. 
 
-The broom is implemented as a grabbable object. When held, forward movement is applied based on controller orientation and player input. This maintains immersion and gives the player direct control over movement.  
+The broom is implemented as a grabbable object. When held in socket close to the body,forward movement is applied based on right controller orientation and player input trigger. This maintains immersion and gives the player direct control over movement.  
 
 The flying system integrates with existing XR Locomotion rather than replacing it entirely, allowing players to switch between grounded interaction and flight.
 
-There are several technical challenges. The movement system was designed to respond to the player’s hand orientation, which initially resulted in unstable and overly sensitive controls. Small wrist movements caused sudden changes in direction, making the broom difficult to stee, turn and uncomfortable to use.
+There are several technical challenges. The movement system was initially resulted in unstable and overly sensitive controls. Small wrist movements caused sudden changes in direction, making the broom difficult to stee, turn and uncomfortable to use.
 
-Key considerations during implementation included:
+This led to key considerations during implementation included:
 - Smoothing/gradual acceleration to reduce motion discomfort  
 - Avoiding sudden changes in velocity  
 - Maintaining stable height control
@@ -109,7 +109,7 @@ Key considerations during implementation included:
 
 
 ### 3.4 Unique Potion Completion Event
-To provide a clear goal for the crafting system, a completion mechanic was implemented. The system tracks which potion types have been crafted using a `HashSet`, ensuring that only unique potion types are counted.
+To provide a clear goal for the crafting system, a completion system was implemented. The system tracks which potion types have been crafted and ensures that only unique potion types are counted.
 
 Each time a potion prefab is instantiated, it is registered with a completion checker. Once all four potion types have been crafted:
 - A light beam GameObject is activated  
@@ -126,13 +126,13 @@ Each time a potion prefab is instantiated, it is registered with a completion ch
 ## 4. Reflection
 This project significantly deepened my understanding of VR interaction design and XR system architecture. I gained practical experience working with XR Interaction Toolkit, Scriptable Objects, and event-driven gameplay systems.
 
-The development process highlighted the importance of designing for player feedback and motivation. Initially, I noticed the experience lacked a clear goal, but later when I introduce the potion completion event, this gave the game a stronger sense of purpose.
+The development process highlighted the importance of designing for player feedback and motivation. Initially, I noticed the game experience lacked a clear goal, but later when I introduce the potion completion event, this gave the game a stronger sense of purpose.
 
-From a technical perspective, I improved my ability to debug complex interaction issues and structure code in a modular, maintainable way.
+From a technical perspective, I  believe I improved my ability to debug much more complex interaction issues and structure code in a modular, maintainable way.
 
-One key area for improvement is interaction polish.More time spent on tuning physics values, hand input smoothing, and visual feedback would improve overall immersion and reduce player fatigue or confusion.
+One key area for improvement is interaction polish. More time should be spent on tuning physics values, hand input smoothing, and visual feedback because this would improve the overall immersion and reduce player fatigue or confusion.
 
-Moreover, adding structured challenges, consequences would strengthen player motivation: guided objectives, enemy encounters, or time based challenges would give the potion system more impact within the game world.
+Moreover, adding structured challenges, consequences would strengthen player motivation. For example, a few guided objectives, some enemy encounters, or time based challenges would give the potion system more impact within the game world.
 
 ## 5. Future Work Consideration
 - Expanding potion effects to influence gameplay more directly  
