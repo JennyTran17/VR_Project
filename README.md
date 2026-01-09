@@ -1,7 +1,6 @@
 # Witchcraft VR  
 **VR Application Development Report & Reflection**
 
----
 
 ## 1. Introduction
 Witchcraft VR is a virtual reality prototype developed using Unity (v 2022.3.62f1) and the XR Interaction Toolkit. The project was created as part of a VR Application Development module, with the aim of exploring interaction design, locomotion, and object-based gameplay within a VR environment.
@@ -9,8 +8,12 @@ Witchcraft VR is a virtual reality prototype developed using Unity (v 2022.3.62f
 The application allows the player to move freely through a virtual space, collecting ingredients and crafting potions via cauldron-based system. The experience prioritises interaction and systems over scripted events, encouraging exploration and experimentation. Over the course of development, several core mechanics were implemented, refined, and evaluated, including wand interaction, potion crafting, broom-based flying, and an end-game completion event.
 
 This report documents the technical achievements of the project, highlights challenges encountered during development, and reflects on the learning outcomes achieved.
+<table border="0">
+  <tr align="center">
+    <td><img src="https://github.com/user-attachments/assets/28c0be3a-c603-4d14-9a37-ae30053d3c2c" width="500"></td>
+  </tr>
+</table>
 
----
 
 ## 2. Project Overview and Design Goals
 The primary design goal of Witchcraft VR was to create a small but complete VR experience with a clear gameplay loop. This loop consists of:
@@ -23,7 +26,6 @@ Progression is driven by player interaction with systems rather than linear scri
 
 Another key objective was extensibility. Systems such as potion crafting and interaction logic were designed so that additional content could be added without significant refactoring.
 
----
 
 ## 3. Technical Implementation
 ### 3.1 Wand Interaction System
@@ -42,12 +44,12 @@ When the wand is not held, the player can still perform magic actions, but limit
 **Screenshots:**
 <table border="0">
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/fac82f50-6089-4f08-be03-e7efc143893a" width="400"></td>
+    <td><img src="https://github.com/user-attachments/assets/fcb11410-6b6f-4772-a53f-4f379dbd00b1" width="700"></td>
+    <td><img src="https://github.com/user-attachments/assets/fac82f50-6089-4f08-be03-e7efc143893a" width="500"></td>
     <td><img src="https://github.com/user-attachments/assets/509736ce-650d-4bff-978c-769a6c7f28a3" width="500"></td>
   </tr>
 </table>
 
----
 
 ### 3.2 Potion Crafting System
 The potion crafting system is built using ScriptableObjects and a central manager class. Each potion is defined by a `PotionData` ScriptableObject, which contains:
@@ -84,7 +86,6 @@ A limitation of the current system is that it requires an exact match in both in
   </tr>
 </table>
 
----
 
 ### 3.3 Broom Flying Mechanic
 Player movement is primarily handled through a broom-based flying mechanic, which allows for free traversal in the environment without relying only on teleportation. 
@@ -99,14 +100,18 @@ Key considerations during implementation included:
 The flying system integrates with existing XR Locomotion rather than replacing it entirely, allowing players to switch between grounded interaction and flight. While effective, the system could benefit from additional constraints, such as speed limits or environmental boundaries.
 
 **Screenshots:**
+<table border="0">
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/a60a528b-2f26-4a08-b3c6-e82d1161588f" width="500"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/06cbce3c-1fe0-4385-94fe-467d8407a80f" width="500"></td>
+  </tr>
+</table>
 
----
 
 ### 3.4 Unique Potion Completion Event
 To provide a clear goal for the crafting system, a completion mechanic was implemented. The system tracks which potion types have been crafted using a `HashSet`, ensuring that only unique potion types are counted.
 
 Each time a potion prefab is instantiated, it is registered with a completion checker. Once all four potion types have been crafted:
-
 - A light beam GameObject is activated  
 - A video cutscene begins playing  
 - Further completion checks are disabled  
@@ -122,7 +127,6 @@ This event serves as a clear conclusion to the experience and provides feedback 
   </tr>
 </table>
 
----
 
 ## 4. Technical Challenges and Solutions
 One of the main challenges encountered was working with XR Interaction Toolkit’s dynamic attachment system. Objects are not always parented in a traditional transform hierarchy, making hand detection and attachment logic more complex.
@@ -134,7 +138,6 @@ This issue was addressed by:
 
 Another challenge involved keeping systems modular and loosely coupled. This was resolved by ensuring systems communicate through clearly defined methods rather than direct dependencies.
 
----
 
 ## 5. Reflection
 This project highlighted the importance of designing interactions specifically for VR rather than adapting non-VR patterns. Mechanics that appear simple in traditional games often require additional consideration when physical interaction and player comfort are involved.
@@ -143,7 +146,6 @@ A personal key learning outcome was gaining a deeper understanding of XR Interac
 
 Overall, the project demonstrates a solid foundation in VR interaction design and system-based gameplay. While limited in scope, it delivers a complete and coherent experience with clear goals and meaningful interaction.
 
----
 
 ## 6. Future Work
 Potential future considerations include:
@@ -153,5 +155,3 @@ Potential future considerations include:
 - Improving player experience with more audio and visual feedback
 
 These improvements would build upon the existing systems while maintaining the project’s modular structure.
-
----
